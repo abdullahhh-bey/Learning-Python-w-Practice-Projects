@@ -56,3 +56,160 @@
 
 
 
+
+
+#Remove any element in set so safely that If it dont exists, 
+#program should be fine (no error)
+# s = {"Apple" , 3 , True , "Hello", 29.3}
+# s.discard(2)
+# print(s)
+
+
+
+#Give union and Intersection of sets
+# set1 = {10,20,30,40}
+# set2 = {20,70,50,40}
+
+# unionSet = set1.union(set2)
+# intersectionSet = set1.intersection(set2)
+
+# print(unionSet)
+# print(intersectionSet)
+
+
+
+
+#convert htis duplicate list to set and back to list
+# nums = [1,2,2,3,4,4,5,6,6]
+# num_set = set(nums)
+# nums = list(num_set)
+# print(nums)
+
+
+
+
+
+# #make a dict of 3 countries and their capitls
+# dict_list = [
+#     {
+#         "country" : "Pakistan",
+#         "capital" : "Islamabad"
+#     }, 
+#     {
+#         "country" : "England",
+#         "capital" : "London"
+#     },
+#     {
+#         "country" : "Turkey",
+#         "capital" : "Istanbul"
+#     }
+# ]
+
+# #example access
+# print(dict_list[0]["country"])
+
+
+
+
+#FIND THE CAPITAL OF THE COUNTRY BY TAKING INPUT FROM USER
+# dict_list = [
+#     {
+#         "country" : "pakistan",
+#         "capital" : "Islamabad"
+#     }, 
+#     {
+#         "country" : "england",
+#         "capital" : "London"
+#     },
+#     {
+#         "country" : "turkey",
+#         "capital" : "Istanbul"
+#     }
+# ]
+
+# input = input("Enter country: ")
+
+# for i in range(0, len(dict_list)):
+#     if input in dict_list[i]["country"]:
+#         cap = dict_list[i]["capital"]
+#     else:
+#         continue
+    
+# print(cap)
+
+
+
+
+
+#Store 5 student and their grades in a dict and print who has grade "A"
+# dict_list = [
+#     {
+#         "student" : "Alex",
+#         "grade" : "A"
+#     },
+#     {
+#         "student" : "Pingu",
+#         "grade" : "B"
+#     },
+#     {
+#         "student" : "Hopi",
+#         "grade" : "A"
+#     },
+#     {
+#         "student" : "Dembel",
+#         "grade" : "D"
+#     },
+#     {
+#         "student" : "Panda",
+#         "grade" : "E"
+#     },
+# ]
+
+# grade_list = []
+
+# for i in range(0 , len(dict_list)):
+#     if "A" in dict_list[i]["grade"]:
+#         grade_list.append(dict_list[i])
+        
+# print(grade_list)
+
+
+
+
+
+
+# #Merge two dict into one Dictionary
+# dict_1 = {
+#     "game1" : "Pubg"
+# }
+
+# dict_2 = {
+#     "game2" : "Clash of Clans"
+# }
+
+# merged_dict = {**dict_1 , **dict_2}
+# print(merged_dict)
+
+
+
+
+
+# #Check if key exists in a dict or not
+# dict_list = {
+#     "name" : "Alex",
+#     "skill" : "coding",
+#     "age" : 21,
+#     "isIntelligent" : False,
+#     "isCrazy" : True
+# }
+
+# key = input("Enter key you wanna find: ")
+# found = False
+# for k in dict_list:
+#     if key == k:
+#         found = True
+#     else:
+#         continue
+
+# print("Key found" if found==True else "Key not found")
+

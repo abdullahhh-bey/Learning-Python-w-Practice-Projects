@@ -1,5 +1,10 @@
 # import mymodule as m
 
+# x = m.getdate()
+# date = x[0]
+# day = x[1]
+# print(f"Date: {date}")
+# print(f"Day: {day}")
 # x = m.sum(2,3,2,43,45324,1,42345,23)
 # print(x)
 

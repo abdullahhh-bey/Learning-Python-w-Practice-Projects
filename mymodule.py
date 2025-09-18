@@ -4,6 +4,7 @@
 
 import random
 import math
+import datetime
 
 def sum( *args ):
     result = 0
@@ -30,3 +31,9 @@ def sqrt(a):
 def randomNumber():
     n = random.randrange(1, 11)
     return n
+
+
+def getdate():
+    date = datetime.datetime.now()
+    day = date.strftime("%A")
+    return [date, day]

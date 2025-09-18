@@ -1,3 +1,13 @@
+# import mymodule as m
+
+# x = m.sum(2,3,2,43,45324,1,42345,23)
+# print(x)
+
+# print(f"{m.randomNumber()}")
+# print(f"{int(m.divide(4,2))}")
+# print(f"{int(m.sqrt(45))}")
+
+
 #Print Only Even Numbers
 # num_list = [1,2,3,4,5,6,7,8,9,10]
 

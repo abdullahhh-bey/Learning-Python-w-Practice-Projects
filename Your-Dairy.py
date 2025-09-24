@@ -31,25 +31,30 @@ def WriteEntry():
         print("file already created")
     else:
         print(f"{fileName} Created")
+        
         content = str(input("Write an Entry: "))
         f = open(f"./{fileName}.txt", "wt")
         date = datetime.datetime.now()
         f.write(f"[{date}]  {content}\n")
+        
         print("New Entry Created!")
     
     
     
 def AddEntry():
     content = str(input("Add an Entry: "))
+    
     f = open("./localEntry.txt", "at")
     date = datetime.datetime.now()
     f.write(f"[{date}]  {content}\n")
+    
     print("Entry Added!")
 
 
 
 def ReadEntry():
     fileName = str(input("Enter filename you want to read: "))
+    
     if os.path.exists(f"{fileName}.txt"):
         f = open(f"./{fileName}.txt" , "rt")
         content = f.read()
@@ -61,6 +66,7 @@ def ReadEntry():
         
 def DeleteFile():
     file = str(input("Enter file you want to delete: "))
+    
     if os.path.exists(f"{file}.txt"):
         os.remove(f"{file}.txt")
         print(f"{file}.txt DELETED")

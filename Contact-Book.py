@@ -58,6 +58,35 @@ def searchByName(name):
         return foundList
     
     
+def searchByEmail(email): 
+    e = email.strip()
+    foundList = []
+    
+    if e == "":
+        raise Exception("Cannot pass a null value")
+    found = False
+    global contact
+    for v in contact:
+        if e == v["email"]:
+            found = True
+            foundList.append(v)
+        else:
+            continue
+        
+    if found is False:
+        return f"No Contact with the Email:{e}"
+    else:
+        return foundList
+    
 
-userName = input("Enter Name: ")
-print(searchByName(userName))
+def displayAllContact():
+    global contact 
+    allContacts = []
+    
+    for v in contact:
+        allContacts.append(v)
+    return allContacts
+
+
+
+print(displayAllContact())

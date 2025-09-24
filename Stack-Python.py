@@ -20,6 +20,7 @@ def isEmpty():
     global stack
     return len(stack) == 0
 
+
 def PeekItem():
     if not isEmpty():
         global stack

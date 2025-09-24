@@ -44,6 +44,7 @@ def searchByName(name):
     if n == "":
         raise Exception("Cannot pass a null value")
     found = False
+    
     global contact
     for v in contact:
         if n == v["name"]:
@@ -102,3 +103,47 @@ def removeContact(email):
     if found is False:
         return f"No Contact with this Email: {email}"
     
+    
+
+print("Welcome to FindMe.COM")
+choice = True
+
+while choice is True:
+    try:
+        print("1 -> Add Contact ( Name, Email, Phone Number )")
+        print("2 -> Search Contact ")
+        print("3 -> Display All Contacts ")
+        print("4 -> Remove Contact by Email")
+        print("5 -> Exit")
+        userInput = int(input("Enter option no: "))
+        
+        match userInput:
+            case 1:
+                addContact()
+            case 2:
+                print("1 -> By Email ( recommended )")
+                print("2 -> By Name")
+                opt = int(input("Enter options for search (1 or 2): "))
+                match opt:
+                    case 1:
+                        email = input("Enter Email to search: ")
+                        print(searchByEmail(email))
+                    case 2: 
+                        name = input("Enter Name to search: ")
+                        print(searchByName(name))
+            case 3:
+                print(displayAllContact())
+            case 4: 
+                e = input("Enter Email to remove: ")
+                print(removeContact(e))
+            case 5:
+                break
+    except:
+        print("Invalid Exception")
+
+    select = input("Do you want to continue: (Yes/No) ")
+    if select == 'No' or select ==  'no':
+        print("GoodBye!")
+        choice = False
+    else:
+        continue

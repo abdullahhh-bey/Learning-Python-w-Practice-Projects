@@ -88,5 +88,17 @@ def displayAllContact():
     return allContacts
 
 
-
-print(displayAllContact())
+def removeContact(email):
+    global contact
+    found = False
+    for v in contact:
+        if email == v["email"]:
+            contact.remove(v)
+            found = True
+            return "Removed"
+        else:
+            continue
+    
+    if found is False:
+        return f"No Contact with this Email: {email}"
+    

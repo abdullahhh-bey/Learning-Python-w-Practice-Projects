@@ -55,7 +55,26 @@ class LinkedList:
                 prev.next = temp.next
                 print("Removed")
                 break
+       
         
+    def IsEmpty(self):
+        return self.head == None
+        
+        
+    def searchItem(self, key):
+        if self.IsEmpty():
+            print("\nList is Empty")
+        
+        temp = self.head 
+        while temp:
+            if temp.data == key:
+                print("\nFound")
+                return
+            else: 
+                temp = temp.next
+        
+        print("\nNot Found")
+  
   
 
 l = LinkedList()
@@ -65,3 +84,4 @@ l.insertBeginning(8)
 l.display()
 l.removeItem(3)
 l.display()
+l.searchItem(1)

@@ -36,7 +36,7 @@ def WriteEntry():
         f = open(f"./{fileName}.txt", "wt")
         date = datetime.datetime.now()
         f.write(f"[{date}]  {content}\n")
-        
+        f.close()
         print("New Entry Created!")
     
     
@@ -49,6 +49,7 @@ def AddEntry():
     f.write(f"[{date}]  {content}\n")
     
     print("Entry Added!")
+    f.close()
 
 
 
@@ -59,6 +60,7 @@ def ReadEntry():
         f = open(f"./{fileName}.txt" , "rt")
         content = f.read()
         print(content)
+        f.close()
     else:
         print("No such file in directory")
         

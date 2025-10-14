@@ -13,21 +13,24 @@ class BST:
         if self.root is None:
             self.root = node
         
-        found = True
         temp = self.root
-        while found:
+        while True:
             if temp.data > data:
                 if temp.left is None:
                     temp.left = node
-                    return
+                    break
                 else:
                     temp = temp.left
-            else:
+            elif temp.data < data:
                 if temp.right is None:
                     temp.right = node
-                    return
+                    break
                 else:
                     temp = temp.right
+            else:
+                print("No Duplicates")
+                break
+            
         
     def inOrder(self, node):
         if node is None:
@@ -38,7 +41,11 @@ class BST:
         
         
 tree = BST()
-for v in range(1,5):
-    tree.insertItem(v)
+tree.insertItem(5)
+tree.insertItem(3)
+tree.insertItem(19)
+tree.insertItem(7)
+tree.insertItem(1)
+tree.insertItem(20)
     
-tree.inOrder()
+tree.inOrder(tree.root)
